@@ -1,7 +1,10 @@
 //Packages
 import 'package:flutter/material.dart';
 
+//Pages
 import 'sign_in_page.dart';
+
+//This is the page shown after the splash page
 
 class StartPage extends StatelessWidget {
   const StartPage({Key? key}) : super(key: key);

@@ -1,4 +1,7 @@
+//Packages
 import 'package:flutter/material.dart';
+
+//Common and reusable widgets
 
 Widget buildTextField({context, height, controller, obscureText, maxLength, hintText, counterText} ) {
   return Container(

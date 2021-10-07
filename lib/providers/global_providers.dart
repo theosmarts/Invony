@@ -2,10 +2,10 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-//User Model
+//Product Model
 import '../models/product.dart';
 
-//User Service
+//Product Service
 import '../services/product_service.dart';
 
 final productServiceProvider = Provider<ProductService>((ref) {

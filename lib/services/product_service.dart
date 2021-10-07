@@ -1,7 +1,16 @@
+//Packages
 import 'package:dio/dio.dart';
-import 'package:invony/env/env.dart';
-import 'package:invony/exceptions/custom_exception.dart';
-import 'package:invony/models/product.dart';
+
+//Link to API
+import '../env/env.dart';
+
+//Exceptions
+import '../exceptions/custom_exception.dart';
+
+//Product Model
+import '../models/product.dart';
+
+//This service fetches all the products from the API
 
 class ProductService {
   ProductService(this._dio);

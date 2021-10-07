@@ -1,9 +1,15 @@
 //Packages
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:invony/models/product.dart';
-import 'package:invony/widgets/common_widgets.dart';
-import 'package:invony/widgets/product_widget.dart';
+
+//Models
+import '../models/product.dart';
+
+//Widgets
+import '../widgets/common_widgets.dart';
+
+
+//This is the page you are redirected to when you tap on a single product
 
 class ProductDetailPage extends StatefulWidget {
   const ProductDetailPage({Key? key, required this.product}) : super(key: key);
@@ -18,9 +24,6 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
 
   bool buttonTapped = false;
   int number = 1;
-
-
-
 
   @override
   Widget build(BuildContext context) {

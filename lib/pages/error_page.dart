@@ -5,6 +5,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 //Providers
 import '../providers/global_providers.dart';
 
+//Custom error page
+
 class ErrorPage extends ConsumerWidget {
   const ErrorPage({
     Key? key,

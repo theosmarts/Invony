@@ -2,12 +2,24 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:invony/exceptions/custom_exception.dart';
-import 'package:invony/pages/product_detail_page.dart';
-import 'package:invony/providers/global_providers.dart';
-import 'package:invony/widgets/common_widgets.dart';
 
+//Exceptions
+import '../exceptions/custom_exception.dart';
+
+//Pages
 import 'error_page.dart';
+import 'product_detail_page.dart';
+
+//Providers
+import '../providers/global_providers.dart';
+
+//Widgets
+import '../widgets/common_widgets.dart';
+
+
+
+
+//Thos page displays all the products
 
 class ProductsPage extends ConsumerWidget {
   const ProductsPage({Key? key}) : super(key: key);
@@ -21,14 +33,17 @@ class ProductsPage extends ConsumerWidget {
           if (e is CustomException) {
             return ErrorPage(message: e.message);
           }
+          //We return an error page when something goes wrong as the api is fetched
           return ErrorPage(
             message: "Oops, something unexpected happened",
           );
         },
         loading: () => Center(child: CircularProgressIndicator()),
         data: (products) {
-          final page1 = products.sublist(0, 9);
-          final page2 = products.sublist(10);
+          //For custom pagination
+          
+          //final page1 = products.sublist(0, 9);
+          //final page2 = products.sublist(10);
 
           //RefreshIndicator enables us to pull the screen down to make another call to the API
           return RefreshIndicator(
@@ -41,7 +56,7 @@ class ProductsPage extends ConsumerWidget {
                   padding: EdgeInsets.only(top: 8.0),
                   height: 60,
                   child: ListView(
-                    // This next line does the trick.
+                    // This next line makes the scrolling horizontal
                     scrollDirection: Axis.horizontal,
                     children: <Widget>[
                       Padding(
